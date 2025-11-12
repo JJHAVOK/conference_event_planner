@@ -313,3 +313,5 @@ const mealsTotalCost = calculateTotalCost("meals");
 };
 
 export default ConferenceEvent;
+
+<button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">↑</button>
