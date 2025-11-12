@@ -7,7 +7,7 @@ const TotalCost = ({ totalCosts, ItemsDisplay }) => {
     const grandTotal = totalCosts.venue + totalCosts.av + totalCosts.meals;
 
     const total_amount = totalCosts.venue + totalCosts.av + totalCosts.meals;
-return (
+    return (
         // ADDED .content-wrapper HERE
         <div className="content-wrapper"> 
             <div className="total-cost-summary">
@@ -34,7 +34,7 @@ return (
             <div className="display_box">
                 <div className="header">
                     <p className="preheading"><h3>Total cost for the event</h3></p>
-</div>
+                </div>
 
                 <div className="items-list-details">
                     <h3>Itemized Breakdown</h3>
@@ -46,10 +46,10 @@ return (
 <div className="render_items">
     <ItemsDisplay />
 </div>
-</div>
-</div>
-</div>
-);
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default TotalCost;
