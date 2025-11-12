@@ -143,6 +143,7 @@ const ConferenceEvent = () => {
     const ItemsDisplay = ({ items }) => {
         console.log(items);
         return <>
+            {/* Scroll fix: Removed fixed height wrapper around table */}
             <div className="display_box1"> 
                 {items.length === 0 && <p>No items selected</p>}
                 <table className="table_item_data">
@@ -220,7 +221,7 @@ const ConferenceEvent = () => {
 
     return (
         <>
-            {/* 1. THE ONLY FIXED HEADER AT THE VERY TOP */}
+            {/* HEADER / NAVBAR is now sticky and above all content */}
             <header className="app-navbar navbar_event_conference"> 
                 <div className="company_logo">Conference Expense Planner</div>
                 <div className="left_navbar">
@@ -235,15 +236,14 @@ const ConferenceEvent = () => {
                 </div>
             </header>
             
-            {/* 2. MAIN CONTENT WRAPPER */}
             <div className="main_container">
+                {/* Content area that handles padding/centering */}
                 <div className="content-area"> 
                     {!showItems
                         ?
                         (
                             <div className="items-information">
-                                {/* THIS IS THE FORMER "HEADER CLASS FIRST PAGE" CONTENT, NOW A REGULAR DIV */}
-                                <div id="venue" className="venue_container container_main main_content_section"> 
+                                <div id="venue" className="venue_container container_main">
                                     <div className="text">
                                         <h1>Venue Room Selection</h1>
                                     </div>
@@ -292,6 +292,8 @@ const ConferenceEvent = () => {
                                                             >
                                                                 &#43;
                                                             </button>
+
+
                                                         </div>
                                                     )}
                                                 </div>
