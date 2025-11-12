@@ -253,14 +253,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    background-color:#133b6a;
+    background-color:#393939;
     color: white;
     width: 100vw;
   }
   
   .company_logo {
     font-size: 30px;
-    color: #EFC16B;
+    color: #1786c7;
     font-weight: 700;
   }
   .nav_links{

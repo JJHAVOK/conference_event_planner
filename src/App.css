@@ -7,7 +7,7 @@
 .first_page {
   display: flex;
   height: 100vh;
-  background-image: url("https://cdn.pixabay.com/photo/2018/07/05/14/45/conference-3518465_1280.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2019/10/21/10/34/meeting-4565702_1280.jpg");
   background-size: cover;
   background-position: center;
   justify-content: center;
@@ -34,9 +34,9 @@
 }
 
 .get-started-btn {
-  background-color:#EFC16B;
+  background-color:#0e79b9;
   /* color: white; */
-  color: black;
+  color: white;
   border: none;
   padding: 20px 40px;
   font-size: 19px;
@@ -45,7 +45,7 @@
 }
 
 .get-started-btn:hover {
-  background-color: #c1974a;
+  background-color: #2196db;
 }
 
 .getstarted_btn {
