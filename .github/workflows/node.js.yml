@@ -1,0 +1,48 @@
+# This workflow builds and deploys a React application to GitHub Pages.
+name: Deploy React App to GitHub Pages
+
+# Controls when the workflow will run
+on:
+  # Triggers the deployment on pushes to the 'main' branch
+  push:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs
+jobs:
+  build-and-deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Use the Node.js version you are developing with
+          node-version: '20' 
+          cache: 'npm' # Caches npm modules for faster builds
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build React App
+        # This command runs your standard production build script
+        run: npm run build 
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # Token used for pushing to the gh-pages branch
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # The branch where the static files will be pushed
+          publish_branch: gh-pages 
+          # The directory containing the static files (adjust if yours is 'dist')
+          publish_dir: ./build 
+          # Keep original commit messages
+          commit_message: ${{ github.event.head_commit.message }}
