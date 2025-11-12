@@ -43,6 +43,6 @@ jobs:
           # The branch where the static files will be pushed
           publish_branch: gh-pages 
           # The directory containing the static files (adjust if yours is 'dist')
-          publish_dir: ./build 
+          publish_dir: ./dist 
           # Keep original commit messages
           commit_message: ${{ github.event.head_commit.message }}
