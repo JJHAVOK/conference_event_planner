@@ -1,40 +1,84 @@
-.pricing-app {
- margin-top: 20px;
- /* margin-left: 40vw; */
- width: 100vw;
- height: 100vh;
- display: flex;
- align-items: center;
- justify-content: center;
+/* Styling for the TotalCost component (Show Details View) */
+.total-cost-summary {
+    width: 100%;
+    max-width: 900px; /* Constrain the width for readability */
+    margin: 0 auto; /* Center it within the content-area */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Strong card shadow */
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
-
-.display_box {
-  text-align: center;
-  box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  background-color: white;
-  color: #333;
-  margin: 0;
-  padding: 55px;
-  width: 80vw;
+.total-cost-summary h2 {
+    color: #133b6a;
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 10px;
+    font-weight: 600;
 }
 
-
-.pricing-app .preheading {
-  font-family: dosis, sans-serif;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 0;
-  /* padding: 0 0 10px; */
-  font-size: 25px;
+.cost-breakdown {
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.pricing-app h2 {
-  font-size: 60px;
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fcfcfc;
 }
 
-.right {
-  margin-right: 0;
+.cost-item:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.cost-item:last-of-type {
+    border-bottom: none;
+}
+
+.grand-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 20px;
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    background-color: #1786c7; /* Primary Blue Accent */
+    border-radius: 0 0 8px 8px;
+}
+
+.grand-total span {
+    /* Use existing padding */
+}
+
+.items-list-details {
+    margin-top: 40px;
+}
+
+.items-list-details h3 {
+    color: #343a40;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.cost-value {
+    color: #133b6a;
+    font-weight: 600;
+}
+
+/* Itemized Breakdown Table Styling (Leveraging existing table classes from confrenceEvent.css) */
+
+.table_item_data {
+    /* The core table styling comes from confrenceEvent.css */
+    box-shadow: none; 
 }
